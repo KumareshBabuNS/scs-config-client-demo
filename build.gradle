@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         classpath("io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE")
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
     }
 }
 
@@ -19,7 +19,7 @@ jar {
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.boot:spring-boot-dependencies:1.5.3.RELEASE"
+        mavenBom "org.springframework.boot:spring-boot-dependencies:1.5.2.RELEASE"
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR6"
         mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:1.4.1.RELEASE"
     }
@@ -35,7 +35,7 @@ repositories {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE")
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-test")
     compile("org.springframework.security:spring-security-rsa")
