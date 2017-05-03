@@ -4,8 +4,6 @@ spring:
     name: cook
 # code_snippet springApplicationName end
 
-secretMenu: Animal Crackers
-
 encrypt:
   keyStore:
     location: classpath:/server.jks
