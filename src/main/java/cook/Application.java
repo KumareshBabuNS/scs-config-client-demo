@@ -5,29 +5,28 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 
 @RestController
 @SpringBootApplication
-@RefreshScope
+//@RefreshScope
 public class Application {
 
-    @Autowired
-    private Menu menu;
+	@Autowired
+	private Menu menu;
 
-    @RequestMapping("/restaurant")
-    public String restaurant() {
-      return String.format("Today's special is: %s", menu.getSpecial());
-    }
+	@RequestMapping("/restaurant")
+	public String restaurant() {
+		return String.format("Today's special is: %s", menu.getSpecial());
+	}
 
-    @RequestMapping("/restaurant/secret-menu")
-    public String secretMenu() {
-      return menu.getSecretMenu();
-    }
+	@RequestMapping("/restaurant/secret-menu")
+	public String secretMenu() {
+		return menu.getSecretMenu();
+	}
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
 
 }

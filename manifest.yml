@@ -2,8 +2,4 @@
 instances: 1
 memory: 1G
 applications:
-  - name: cook
-    host: cookie
-    services:
-      - config-server
-buildpack: java_buildpack_offline
+  - name: cook 

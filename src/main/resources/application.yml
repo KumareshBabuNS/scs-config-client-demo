@@ -1,10 +1,24 @@
 security:
   basic:
     enabled: false
-
+  ignored: /**
+info:
+  app:
+    version:
+      java: @java.version@
+      spring: @spring.version@
 management:
   security:
     enabled: false
+  info:
+   git:
+     mode: full
+  cloudfoundry:
+    skip-ssl-validation: true
+    enabled: true
 
 secretMenu: Mysecret
 cook.special: Brisket
+endpoints:
+  sensitive: false
+
